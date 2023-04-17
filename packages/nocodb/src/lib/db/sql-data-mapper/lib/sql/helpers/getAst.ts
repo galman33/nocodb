@@ -90,7 +90,7 @@ const getAst = async ({
 
         // todo: include field relative to the relation => pk / fk
       } else {
-        value = (Array.isArray(fields) ? fields : fields.split(',')).reduce(
+        value = (Array.isArray(nestedFields) ? nestedFields : nestedFields.split(',')).reduce(
           (o, f) => ({ ...o, [f]: 1 }),
           {}
         );
